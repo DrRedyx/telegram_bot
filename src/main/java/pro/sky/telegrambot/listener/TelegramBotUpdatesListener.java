@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pro.sky.telegrambot.interfaceee.NotificationTaskService;
 import pro.sky.telegrambot.model.NotificationTask;
+import pro.sky.telegrambot.service.NotificationTaskImpl;
 
 import javax.annotation.PostConstruct;
 import java.text.ParseException;
@@ -23,7 +24,8 @@ public class TelegramBotUpdatesListener implements UpdatesListener {
     private TelegramBot telegramBot;
 
     @Autowired
-    private NotificationTaskService notificationTaskService;
+    private NotificationTaskImpl notificationTaskService;
+
 
     @PostConstruct
     public void init() {

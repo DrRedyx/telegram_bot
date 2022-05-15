@@ -3,6 +3,7 @@ package pro.sky.telegrambot.service;
 import com.pengrad.telegrambot.TelegramBot;
 import com.pengrad.telegrambot.request.SendMessage;
 import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Service;
 import pro.sky.telegrambot.interfaceee.NotificationTaskService;
 import pro.sky.telegrambot.model.NotificationTask;
 import pro.sky.telegrambot.repository.RepositoryNotificationTask;
@@ -13,6 +14,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.Collection;
 
+@Service
 public class NotificationTaskImpl implements NotificationTaskService {
     private final RepositoryNotificationTask repositoryNotificationTask;
     private final TelegramBot telegramBot;
